@@ -5,13 +5,13 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { NavigationBar } from "./components/NavigationBar.jsx";
 import { Layout } from "./components/Layout.jsx";
 import { Jumbotron } from "./components/Jumbotron.jsx";
+import { Footer } from "./components/Footer.jsx";
 
 //Pages
 import { HomePage } from "./components/HomePage.jsx";
 import { AboutPage } from "./components/AboutPage.jsx";
 import { ContactPage } from "./components/ContactPage.jsx";
 import { NoMatchPage } from "./components/NoMatchPage.jsx";
-import { Footer } from "./components/Footer.jsx";
 
 function App() {
   return (
