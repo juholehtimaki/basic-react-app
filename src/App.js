@@ -1,25 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment } from "react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+//Components
+import { NavigationBar } from "./components/NavigationBar.jsx";
+import { Layout } from "./components/Layout.jsx";
+import { Jumbotron } from "./components/Jumbotron.jsx";
+
+//Pages
+import { HomePage } from "./components/HomePage.jsx";
+import { AboutPage } from "./components/AboutPage.jsx";
+import { ContactPage } from "./components/ContactPage.jsx";
+import { NoMatchPage } from "./components/NoMatchPage.jsx";
+import { Footer } from "./components/Footer.jsx";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Fragment>
+      <Router>
+        <NavigationBar />
+        <Jumbotron />
+        <Layout>
+          <Switch>
+            <Route exact path="/" component={HomePage} />
+            <Route path="/about" component={AboutPage} />
+            <Route path="/contact" component={ContactPage} />
+            <Route component={NoMatchPage} />
+          </Switch>
+        </Layout>
+      </Router>
+      <Footer />
+    </Fragment>
   );
 }
 
