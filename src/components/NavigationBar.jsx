@@ -10,6 +10,7 @@ const Styles = styled.div`
   a,
   .navbar-brand,
   .navbar-nav .nav-link {
+    padding: 10px;
     color: #bbb;
     &:hover {
       color: white;
@@ -25,19 +26,13 @@ export const NavigationBar = props => (
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
           <Nav.Item>
-            <Nav.Link>
-              <Link to="/">Home</Link>
-            </Nav.Link>
+            <Link to="/">Home</Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link>
-              <Link to="/about">About</Link>
-            </Nav.Link>
+            <Link to="/about">About</Link>
           </Nav.Item>
           <Nav.Item>
-            <Nav.Link>
-              <Link to="/contact">Contact</Link>
-            </Nav.Link>
+            <Link to="/contact">Contact</Link>
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>
